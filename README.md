@@ -9,6 +9,7 @@ Consolidated Java coursework and projects.
 | [`student-management-assignment`](student-management-assignment/) | JavaFX student registration application | https://github.com/Rananjay/StudentManagementAssignment |
 | [`hospital-mfx`](hospital-mfx/) | JavaFX hospital management application with MySQL | https://github.com/Rananjay/Hospital-MFX |
 | [`maple-leaf-library-management-system`](maple-leaf-library-management-system/) | Java console library management demonstration | https://github.com/Rananjay/Maple_Leaf_Library_Management_System |
+| [`hospital-management`](hospital-management/) | Java console hospital staff and billing demonstration | https://github.com/Rananjay/Hospital-Management |
 
 ## Build
 
@@ -41,6 +42,12 @@ Run the Maple Leaf Library Management System:
 mvn --projects maple-leaf-library-management-system exec:java
 ```
 
+Run the Hospital Management module:
+
+```bash
+mvn --projects hospital-management exec:java
+```
+
 ## Repository layout
 
 ```text
@@ -49,6 +56,7 @@ java-projects/
 ├── student-management-assignment/
 ├── hospital-mfx/
 ├── maple-leaf-library-management-system/
+├── hospital-management/
 └── README.md
 ```
 
@@ -57,7 +65,7 @@ java-projects/
 - [x] `StudentManagementAssignment`
 - [x] `Hospital-MFX`
 - [x] `Maple_Leaf_Library_Management_System`
-- [ ] `Hospital-Management`
+- [x] `Hospital-Management`
 - [ ] `java-bank-account-assignment`
 - [ ] `Lab2_Java_Diceroller`
 - [ ] `java-development-assignment`
