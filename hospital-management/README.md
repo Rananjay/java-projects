@@ -1,25 +1,31 @@
-# Hospital Management System
+# Hospital Management
 
-Migrated from `Hospital-Management`.
+A Java console application demonstrating object-oriented hospital-management concepts.
 
-## Overview
+## Features
 
-A console-based Java application demonstrating object-oriented programming concepts including inheritance, polymorphism, interfaces, and method overriding. It models doctors, nurses, surgeons, and emergency doctors in a hospital environment.
+- Person, doctor, nurse, surgeon, and emergency doctor models
+- Inheritance and method overriding
+- `MedicalProfessional` and `Billable` interfaces
+- Runtime polymorphism through `Person` references
+- Consultation billing demonstration
 
 ## Run
 
+From the repository root:
+
 ```bash
-javac com.va.week5.lab3.RananjayChauhan_F2026/src/com/va/week5/lab3/RananjayC/HospitalManagementSystem/*.java
-java -cp com.va.week5.lab3.RananjayChauhan_F2026/src com.va.week5.lab3.RananjayC.HospitalManagementSystem.MainDriver
+mvn --projects hospital-management exec:java
 ```
 
-## Files
+Or from this module:
 
-- `Person.java` — base person model
-- `Doctor.java` — doctor model
-- `Nurse.java` — nurse model
-- `Surgeon.java` — surgeon model
-- `EmergencyDoctor.java` — emergency doctor model
-- `MedicalProfessional.java` — medical professional interface
-- `Billable.java` — billing interface
-- `MainDriver.java` — application entry point
+```bash
+mvn exec:java
+```
+
+## Original repository
+
+This project was migrated from:
+
+https://github.com/Rananjay/Hospital-Management

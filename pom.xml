@@ -16,6 +16,7 @@
         <module>student-management-assignment</module>
         <module>hospital-mfx</module>
         <module>maple-leaf-library-management-system</module>
+        <module>hospital-management</module>
     </modules>
 
     <properties>
