@@ -1,25 +1,49 @@
 # Java Projects
 
-This repository consolidates Rananjay Chauhan's Java coursework and practice projects into one organized codebase.
+Consolidated Java coursework and projects.
 
-## Projects
+## Modules
 
-| Folder | Original repository | Description |
+| Module | Description | Original repository |
 |---|---|---|
-| `bank-account/` | `java-bank-account-assignment` | Java bank-account assignment |
-| `dice-roller/` | `Lab2_Java_Diceroller` | Java dice-roller lab exercise |
-| `hospital-management/` | `Hospital-Management` | Hospital management project |
-| `hospital-mfx/` | `Hospital-MFX` | Hospital management application |
-| `library-management/` | `Maple_Leaf_Library_Management_System` | Library management system |
-| `java-development-assignment/` | `java-development-assignment` | Java Development Week 1 coursework |
+| [`student-management-assignment`](student-management-assignment/) | JavaFX student registration application | https://github.com/Rananjay/StudentManagementAssignment |
 
-## Consolidation plan
+## Build
 
-1. Copy the source files from each original repository into its matching folder.
-2. Preserve each project's README and build/run instructions where available.
-3. Add a project-specific README to any folder that lacks one.
-4. Archive the original repositories after their contents have been successfully migrated.
+Requirements:
 
-## How to use this repository
+- Java 21 or newer
+- Maven 3.8 or newer
 
-Each project is self-contained within its folder. Open the relevant folder to find its source code and instructions.
+Build all modules:
+
+```bash
+mvn clean package
+```
+
+Run the Student Management Assignment module:
+
+```bash
+mvn --projects student-management-assignment javafx:run
+```
+
+## Repository layout
+
+```text
+java-projects/
+├── pom.xml
+├── student-management-assignment/
+│   ├── pom.xml
+│   └── src/
+└── README.md
+```
+
+## Migration status
+
+- [x] `StudentManagementAssignment`
+- [ ] `Hospital-MFX`
+- [ ] `Maple_Leaf_Library_Management_System`
+- [ ] `Hospital-Management`
+- [ ] `java-bank-account-assignment`
+- [ ] `Lab2_Java_Diceroller`
+- [ ] `java-development-assignment`
