@@ -1,46 +1,63 @@
-# Hospital Management System (JavaFX)
+# Hospital MFX
 
-Migrated from `Hospital-MFX`.
+A JavaFX hospital management application for patient registration and records, backed by MySQL.
 
-## Overview
+## Features
 
-A JavaFX desktop application for managing patient records. It provides a patient registration interface with add, update, delete, search, and listing functionality, backed by MySQL through JDBC.
-
-## Requirements
-
-- Java 25 or compatible JDK
-- JavaFX SDK
-- MySQL Server
-- MySQL Connector/J
+- Add, update, delete, and view patients
+- Search patients by name or phone number
+- Patient table with ID, name, age, gender, phone, diagnosis, and admission date
+- Form validation for required fields, age range, and future admission dates
 
 ## Database setup
 
-1. Create the database and table:
+1. Install and start MySQL.
+2. Create the database and table:
 
 ```bash
 mysql -u root -p < database.sql
 ```
 
-2. Update the database connection settings in `src/com/hospital/PatientDAO.java`.
+3. Set database credentials before running the application:
 
-The source currently uses:
-
-```java
-jdbc:mysql://localhost:3306/hospital_db?allowPublicKeyRetrieval=true&useSSL=false
+```bash
+export DB_USER=your_mysql_user
+export DB_PASSWORD=your_mysql_password
 ```
 
-It also contains a placeholder password, `YOUR_MYSQL_PASSWORD`. Replace it with a local development credential or use an environment variable; do not commit a real password.
+On Windows PowerShell:
+
+```powershell
+$env:DB_USER = "your_mysql_user"
+$env:DB_PASSWORD = "your_mysql_password"
+```
 
 ## Run
 
-This project was configured for Eclipse with local JavaFX SDK paths in `.classpath`. Open it in Eclipse with a compatible JavaFX SDK installed, or run it using your local JavaFX module path.
+From the repository root:
 
-## Files
+```bash
+mvn --projects hospital-mfx javafx:run
+```
 
-- `src/com/hospital/App.java` — JavaFX application entry point
-- `src/com/hospital/Patient.java` — patient model
-- `src/com/hospital/PatientController.java` — JavaFX UI and patient workflow
-- `src/com/hospital/PatientDAO.java` — MySQL data-access layer
-- `src/application/application.css` — JavaFX stylesheet
-- `database.sql` — MySQL database and table setup
-- `lib/` — project dependencies
+Or from this module:
+
+```bash
+mvn javafx:run
+```
+
+## Database connection
+
+The application connects to:
+
+```text
+jdbc:mysql://localhost:3306/hospital_db
+```
+
+Credentials are read from the `DB_USER` and `DB_PASSWORD` environment variables.
+
+## Original repository
+
+This project was migrated from:
+
+https://github.com/Rananjay/Hospital-MFX
